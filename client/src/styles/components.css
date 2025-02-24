@@ -1,0 +1,26 @@
+@layer components {
+  .space-gradient {
+    @apply bg-gradient-to-r from-blue-900 to-purple-900;
+  }
+
+  .glass-card {
+    @apply bg-black/30 backdrop-blur-lg border border-white/10;
+  }
+
+  .cosmic-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400;
+  }
+
+  .star-button {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+
+  .star-button::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 transition-opacity duration-300;
+  }
+
+  .star-button:hover::before {
+    @apply opacity-100;
+  }
+}
